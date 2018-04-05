@@ -1,6 +1,6 @@
 # SDMX to V4 tool
 
-Intended to allow us to quickly create simple SDMX to V4 pipelines for CMD.
+For creating SDMX to V4 pipelines for CMD.
 
 
 # Install
