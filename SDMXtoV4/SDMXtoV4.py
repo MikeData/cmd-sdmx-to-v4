@@ -298,7 +298,7 @@ def ONStype(cell):
 # THE INDIVIDUAL COMMANDS
 # #######################
 
-def PRINTlist(file):
+def SDMXsummary(file):
     
     # create base dataframe
     df = makeDataframeFromSDMX(file)
@@ -326,7 +326,7 @@ def PRINTlist(file):
 
     
 # Builds a CSV from the SDMX with all codes translated.
-def BUILDtran(file):
+def SDMXflattenWithCodes(file):
     
     # create base dataframe
     df = makeDataframeFromSDMX(file)
@@ -345,7 +345,7 @@ def BUILDtran(file):
     
     
 # Builds a "raw" CSV with no codes translated.
-def BUILDraw(file):
+def SDMXflattenWithoutCodes(file):
     
     # create base dataframe
     df = makeDataframeFromSDMX(file)
@@ -417,7 +417,7 @@ def BUILDV4(file, opString):
     
 
 # MAIN TRANSFORM FUNCTION
-def SDMXtoV4(file, dimensions, obs=None, time=None, geo=None, returnFrame=False, CDID=None):
+def SDMXtoV4(file, dimensions, obs=None, time=None, geo=None, returnFrame=False):
 
     # create base dataframe
     df = makeDataframeFromSDMX(file)
@@ -509,17 +509,17 @@ if __name__ == '__main__':
     # -tran  
     # Create a CSV of all fields, with everything translated
     if sys.argv[1] == '-tran':
-        BUILDtran(file)
+        SDMXflattenWithCodes(file)
         
     # -raw
     # Create a CSV of all fields, with nothing translated
     elif sys.argv[1] == '-raw':
-        BUILDraw(file)
+        SDMXflattenWithoutCodes(file)
         
     # -list
     # Identifies time and geography, provides a list of other dimensions
     elif sys.argv[1] == '-list':
-        PRINTlist(file)
+        SDMXsummary(file)
     
         
     # -V4...see below
