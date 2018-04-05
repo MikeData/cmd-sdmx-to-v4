@@ -36,6 +36,42 @@ dataFrame = SDMXTOV4(<v4file>, [dimensions], returnFrame=True)
 
 Example SDMXsummary output
 ```
+------------------
+Mandatory Dimensions
+----------------
+These will be included automatically in the V4 transformation.
+
+Time Column:       time_period
+Geography Column:  ref_area
+Observations:      obs_value
+
+
+Optional Dimensions
+-----------------------
+OCCURANCES  | ITEM
+-----------------------
+1           | accounting_entry
+89          | activity
+1           | adjustment
+1           | compiling_org
+1           | conf_status
+1           | counterpart_area
+1           | counterpart_sector
+1           | decimals
+1           | embargo_date
+1           | expenditure
+1           | freq
+14          | instr_asset
+1           | obs_status
+3           | prices
+1           | ref_sector
+2           | ref_year_price
+5           | sto
+1           | table_identifier
+1           | title
+1           | transformation
+1           | unit_measure
+1           | unit_mult
 
 ```
 
