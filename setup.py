@@ -9,6 +9,6 @@ setup(
   author_email = 'michael.adams@ons.gov.uk',
   url = 'https://github.com/ONS-OpenData/SDMXtoV4',
   download_url = 'https://github.com/ONS-OpenData/SDMXtoV4/archive/0.1.tar.gz',
-  keywords = ['extraction', 'SDMX', 'data'],
+  keywords = ['extraction', 'SDMX', 'data', 'v4', 'dataset'],
   classifiers = [],
 )
