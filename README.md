@@ -16,7 +16,7 @@ This section is concerned without use inside a python script. Some command line 
 ## Main Extracton Functions
 
 ```python
-from SDMXtoV4.SDMXtoV4 import SDMXtoV4, SDMXsummary, SDMXflattenWithCodes, SDMXflattenWithoutCodes
+from SDMXtoV4.SDMXtoV4 import SDMXtoV4, SDMXsummary
 
 # ALWAYS use this first. An example of the summary output is included below.
 # will tell you if obs, time and geography dimensions have been automatically found.
@@ -40,7 +40,7 @@ Example SDMXsummary output
 ```
 
 ## Other Functions
-```
+```python
 from SDMXtoV4.SDMXtoV4 import SDMXflattenWithCodes, SDMXflattenWithoutCodes
 
 # Flatten all dimensions into a simple one-row-per-obs
