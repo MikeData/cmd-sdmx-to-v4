@@ -4,7 +4,7 @@ import pandas as pd
 import requests, sys, re
 
     
-# The different 'modes; you can run the tool in from the command lone. This choice is passed on the command line by sys argument 1.
+# The different 'modes; you can run the tool in from the command line. This choice is passed on the command line by sys argument 1.
 modes = {
     '-tran':"Return a simple 'observation per row' CSV of all data and metadata fields with all codes translated",
     '-raw ':"Return a simple 'observation per row' CSV of all data and metadata fields with none of the codes translated",
