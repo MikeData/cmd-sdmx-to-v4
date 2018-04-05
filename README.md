@@ -57,7 +57,7 @@ SDMXflattenWithoutCodes(<v4file>)
 
 v4 transformation
 NOTE = the string commands at the end (after "SDMX>") must start with dimensions and must only contain spaces between keywords.
-```python SDMXtoV4.py -v4 <SOURCE SDMX> dimension=this,that,other obs=obColName
+```python SDMXtoV4.py -v4 <SOURCE SDMX> dimension=this,that,other obs=obColName```
 
 SDMX summary
 ```python SMXtoV4.py -list <SOURCE SDMX>```
