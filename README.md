@@ -10,7 +10,7 @@ For creating SDMX to V4 pipelines for CMD.
 
 # Usage
 
-This section is concerned without use inside a python script. Some command line usage guidence is provided at the end.
+This section is concerned with use inside a python script. Some command line usage guidence is provided at the end.
 
 
 ## Main Extracton Functions
