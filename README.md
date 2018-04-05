@@ -2,19 +2,54 @@
 
 Intended to allow us to quickly create simple SDMX to V4 pipelines for CMD.
 
-SDMX is a very well structured data source with fully provisioned codelists behind it. While we could convert *everything* from within an SDMX dataset into V4 for loading onto CMD, what you end up with is an awful lot of one-item-only dimensions containing what we regard metadata, inside a structurally sound but user-unfriendly mess of a datacube.
 
-The point of this tool then is to help us identify and quickly transform datasets using only those dimensions we want to expose as V4.
+# Install
+
+`pip install git+https://github.com/ONS-OpenData/SDMXtoV4.git`
 
 
 # Usage
 
-These section covers usage on the command line. Use as a python module is simpler and covered at the end.
+This section is concerned without use inside a python script. Some command line usage guidence is provided at the end.
 
-```python SDMXtoV4.py -v4 <SOURCE SDMX> "dimensions=Industry,Age"```
 
-The "dimension=" part of the above is how you specify which dimensions you want to convert (observation, time and geography are included automatically - in this example we've also decided to inlcude Industry and Age as dimensions).
+## Main Extracton Functions
 
+```python
+from SDMXtoV4.SDMXtoV4 import SDMXtoV4, SDMXsummary, SDMXflattenWithCodes, SDMXflattenWithoutCodes
+
+# ALWAYS use this first. An example of the summary output is included below.
+SDMXsummary(<v4file>)
+
+# main function - to output a converted csv
+# [dimensions] is just a list of dimensions as listed by SDMXsummary
+SDMXTOV4(<v4file>, [dimensions])
+
+# you can always use the keywords obs=, time=, and geo= to specify where those mandatory dimension are not found.
+SDMXTOV4(<v4file>, [dimensions], obs="obsDimensionName")
+
+# you can also return the contents of the CSV directly as a pandas dataframe instead of writing
+dataFrame = SDMXTOV4(<v4file>, [dimensions], returnFrame=True)
+
+```
+
+Example SDMXsummary output
+```
+
+```
+
+## Other Functions
+```
+from SDMXtoV4.SDMXtoV4 import SDMXflattenWithCodes, SDMXflattenWithoutCodes
+
+# Flatten all dimensions into a simple one-row-per-obs
+# Convert all the codelists and codes using sdmx.org APIs
+SDMXflattenWithCodes(<v4file>)
+
+# Flatten all dimensions into a simple one-row-per-obs
+SDMXflattenWithoutCodes(<v4file>)
+
+```
 
 
 # Other Functionality
