@@ -75,7 +75,7 @@ OCCURANCES  | ITEM
 
 ```
 
-as a rule you'll need to include all dimensions that have more than one option (i.e are not metadata) to avoid sparsity issues.
+as a rule you'll need to include all dimensions that have more than one occurance (i.e are not metadata) to avoid sparsity issues.
 
 ## Other Functions
 ```python
