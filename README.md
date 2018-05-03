@@ -5,7 +5,7 @@ For creating SDMX to V4 pipelines for CMD.
 
 # Install
 
-`pip install git+https://github.com/ONS-OpenData/SDMXtoV4.git`
+`pip install git+https://github.com/ONS-OpenData/cmd-sdmx-to-v4.git`
 
 
 # Usage
